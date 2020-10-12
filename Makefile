@@ -10,7 +10,7 @@ clean::
 	for d in $(CLEAN_SUBDIRS); do $(MAKE) -C $$d $@; done
 	rm -f TAGS tags
 
-distclean:: clean
+distclean:: clean,,,,
 	find . -name '*~' -exec rm '{}' \;
 
 TAGS_SUBDIRS = $(BUILD_SUBDIRS) devices lib
